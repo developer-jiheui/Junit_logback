@@ -11,9 +11,8 @@
 </head>
 <body>
 
-  <a href="${contextPath}/exercise1.do">연습가기1</a>
-  <a href="${contextPath}/exercise2.do">연습가기2</a>
-  <a href="${contextPath}/exercise3.do">연습가기3</a>
+  <a href="${contextPath}/contact/detail.do">디테일</a>
+  <a href="${contextPath}/contact/list.do">리스트</a>
 
 </body>
 </html>

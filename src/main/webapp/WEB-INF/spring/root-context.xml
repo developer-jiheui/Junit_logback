@@ -5,11 +5,11 @@
 
   <!-- Root Context: defines shared resources visible to all other web components -->
 
-  <bean class="com.zaxxer.hikari.HikariConfig"
+    <bean class="com.zaxxer.hikari.HikariConfig"
         id="hikariConfig"
         scope="singleton">
-    <property name="driverClassName" value="oracle.jdbc.OracleDriver"/>
-    <property name="jdbcUrl" value="jdbc:oracle:thin:@localhost:1521:xe"/>
+    <property name="driverClassName" value="net.sf.log4jdbc.sql.jdbcapi.DriverSpy"/>
+    <property name="jdbcUrl" value="jdbc:log4jdbc:oracle:thin:@localhost:1521:xe"/>
     <property name="username" value="GD"/>
     <property name="password" value="1111"/>
   </bean>
@@ -19,6 +19,22 @@
         scope="singleton">
     <constructor-arg ref="hikariConfig"/>
   </bean>
+
+
+<!--  <bean class="com.zaxxer.hikari.HikariConfig"-->
+<!--        id="hikariConfig"-->
+<!--        scope="singleton">-->
+<!--    <property name="driverClassName" value="oracle.jdbc.OracleDriver"/>-->
+<!--    <property name="jdbcUrl" value="jdbc:oracle:thin:@localhost:1521:xe"/>-->
+<!--    <property name="username" value="GD"/>-->
+<!--    <property name="password" value="1111"/>-->
+<!--  </bean>-->
+
+<!--  <bean class="com.zaxxer.hikari.HikariDataSource"-->
+<!--        id="hikariDataSource"-->
+<!--        scope="singleton">-->
+<!--    <constructor-arg ref="hikariConfig"/>-->
+<!--  </bean>-->
 
   <bean class="org.mybatis.spring.SqlSessionFactoryBean"
         id="sqlSessionFactoryBean"
